@@ -1,0 +1,5 @@
+withRouter : app.js m uska component include na ho fr bhi us component ki puri details console m aana 
+
+Link : a tag ki jgh use hota h isme href ki jgh to dete h 
+
+navLink : Link jesa hi hota h bs isme active tag bhi add ho jta h 

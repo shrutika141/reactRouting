@@ -3,6 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+
+axios.defaults.baseURL="https://jsonplaceholder.typicode.com";
+
+axios.defaults.headers.common['Authorization'] = "abcclknk";
+
+axios.interceptors.request.use(req => {               //request aur response ko bhaar hi handle kr leta h 
+  return req;
+} , err => {
+  return Promise.reject(err);
+} );
+
+axios.interceptors.response.use(res => {
+  // console.log(res);
+  return res.data;
+} , err => {
+  return Promise.reject(err);
+} );
+
 
 ReactDOM.render(
   <React.StrictMode>
